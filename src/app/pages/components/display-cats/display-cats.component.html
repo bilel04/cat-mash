@@ -1,0 +1,23 @@
+<div class="container-fluid">
+    <app-breadcumb [title]="title"></app-breadcumb>
+    <div class="row">
+        <div class="col-sm-4 mt-3 mb-4" *ngFor="let cat of cats; let i = index">
+            <mat-card>
+                <mat-card-header>
+                    <div mat-card-avatar>
+                        <i class="fa-solid fa-cat"></i>
+                    </div>
+                    <mat-card-title>{{'CAT.cat' | translate }} {{i + 1}}</mat-card-title>
+                    <mat-card-subtitle>{{'CAT.cute cat' | translate }}</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image [src]="cat.url" class="mt-3 mb-3">
+                <mat-card-content>
+                    {{'CAT.score' | translate}}: <span>{{cat.score}} <i class="fa-solid fa-heart"></i></span>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+    <div class="row mb-3 load-button-row">
+        <button class="btn btn-outline-primary btn-rounded" [disabled]="disabledLoadButton" (click)="loadCats()">{{'CAT.load more' | translate }}</button>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+{
+    "HEADER": {
+        "PAGE": {
+            "cats": "List of cats"
+          },
+          "LANG": {
+            "English": "English",
+            "French": "French"
+          }
+    },
+    "CAT": {
+        "cat": "CHAT",
+        "cute cat": "Cute cat",
+        "score":"My miaw (score)",
+        "load more": "Load more cats"
+    }
+}

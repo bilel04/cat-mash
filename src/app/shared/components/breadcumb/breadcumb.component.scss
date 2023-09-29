@@ -1,0 +1,12 @@
+@import "src/app/@theme/colors";
+
+header {
+    background-color: $gray;
+    padding: 8px 4px;
+    border-radius: 4px;
+
+    h3 {
+        color: $secondary;
+        font-variant: all-petite-caps;
+    }
+}

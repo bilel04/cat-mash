@@ -1,0 +1,17 @@
+{
+    "HEADER": {
+        "PAGE": {
+            "cats": "Liste des chats"
+          },
+        "LANG": {
+            "English": "Anglais",
+            "French": "Français"
+        }
+    },
+    "CAT": {
+        "cat": "CAT",
+        "cute cat": "Un chat mignon",
+        "score":"Mon miaw (score)",
+        "load more": "Recharger plus de chats"
+    }
+}
