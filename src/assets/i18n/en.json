@@ -1,7 +1,8 @@
 {
     "HEADER": {
         "PAGE": {
-            "cats": "List of cats"
+            "cats": "List of cats",
+            "vote cat": "Vote cat"
           },
           "LANG": {
             "English": "English",

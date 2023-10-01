@@ -1,7 +1,12 @@
 <div class="container-fluid">
     <app-breadcumb [title]="title"></app-breadcumb>
+    <div class="mt-2 mb-2 text-center">
+        <button class="btn btn-outline-primary btn-rounded" (click)="navigateVotePage()">
+            {{'HEADER.PAGE.vote cat' | translate}}
+        </button>
+    </div> 
     <div class="row">
-        <div class="col-sm-4 mt-3 mb-4" *ngFor="let cat of cats; let i = index">
+        <div class="col-sm-4 mt-2 mb-2" *ngFor="let cat of cats; let i = index">
             <mat-card>
                 <mat-card-header>
                     <div mat-card-avatar>

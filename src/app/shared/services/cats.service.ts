@@ -18,13 +18,27 @@ export class CatsService {
   }
 
   setCats(cats: Cat[]) {
+    this.fillSubjectCat(cats);
+    localStorage.setItem('cats', JSON.stringify(cats));
+  }
+
+  fillSubjectCat(cats: Cat[]) {
     this.cats$.next(cats);
   }
+
+  checkSubjectCats() {
+    return this.cats$.getValue();
+  }
+
+  checkLocalStorage() {
+    return localStorage.getItem('cats');
+  }
+
 
   getAllCats(): Observable<Cat[]> {
     return this._http.get<Observable<Cat[]>>(this._api).pipe(
       map((data: any) => {
-        return data.images;
+        return data.images.map((cat: Cat) => new Cat(cat.id, cat.url));
       })
     );
   }

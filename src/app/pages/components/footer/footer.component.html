@@ -1,0 +1,15 @@
+<ng-content select="router-outlet">
+
+</ng-content>
+
+<mat-toolbar>
+    <span class="example-spacer"></span>
+    <mat-form-field appearance="fill" class="mt-4">
+        <mat-select [formControl]="languageControl" name="language">
+            <mat-option *ngFor="let lang of languages" [value]="lang.value" (click)="_translate.use(lang.value)">
+                {{lang.title | translate}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+</mat-toolbar>
