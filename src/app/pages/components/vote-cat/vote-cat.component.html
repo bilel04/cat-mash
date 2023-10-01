@@ -1,20 +1,16 @@
 <div class="container-fluid">
     <app-breadcumb [title]="title"></app-breadcumb>
-    <div class="mt-2 mb-2 text-center">
+    <div class="mt-2 mb-2">
         <button class="btn btn-outline-primary btn-rounded" (click)="navigateDisplayCatsPage()">
-            {{'HEADER.PAGE.cats' | translate}}
+            <i class="fa-solid fa-arrow-left me-2"></i>{{'HEADER.PAGE.cats' | translate}}
         </button>
     </div>
     <div class="row" *ngIf="this.displayCatOne && this.displayCatTwo">
         <div class="col-sm-6" (click)="voteCat(displayCatOne.id)">
-            <div class="image">
-                <img [src]="displayCatOne.url">
-            </div>
+            <img [src]="displayCatOne.url">
         </div>
         <div class="col-sm-6" (click)="voteCat(displayCatTwo.id)">
-            <div class="image">
-                <img [src]="displayCatTwo.url">
-            </div>
+            <img [src]="displayCatTwo.url">
         </div>
     </div>
 </div>

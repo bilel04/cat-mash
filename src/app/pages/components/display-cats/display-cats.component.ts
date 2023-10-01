@@ -14,7 +14,7 @@ export class DisplayCatsComponent {
   cats: Cat[] = [];
   title = RouterEnum.CATS;
   page: Page = {
-    pageSize: 25,
+    pageSize: 10,
     pageNumber: 0,
     totalRows: 0
   }
