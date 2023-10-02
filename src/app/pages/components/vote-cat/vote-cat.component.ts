@@ -22,14 +22,7 @@ export class VoteCatComponent {
   }
 
   navigateDisplayCatsPage() {
-    this._router.navigate(['cats']).then();
-  }
-
-  initDisplayedCats() {
-      this._catsService.cats$.subscribe(cats => {
-        this.cats = cats;
-        this.getTwoRandomCats(cats);
-      })
+    this._router.navigate(['cats']);
   }
 
   getTwoRandomCats(cats: Cat[]) {
@@ -53,11 +46,15 @@ export class VoteCatComponent {
 
   ngOnDestroy() {
     if (this.cats.length != 0) this._catsService.setCats(this.cats);
-
   }
 
   ngOnInit() {
     if (this._catsService.checkSubjectCats().length === 0) this.navigateDisplayCatsPage();
-    else this.initDisplayedCats();
+    else {
+      this._catsService.cats$.subscribe(cats => {
+        this.cats = cats;
+        this.getTwoRandomCats(cats);
+      })
+    }
   }
 }

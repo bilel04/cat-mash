@@ -27,7 +27,7 @@ export class DisplayCatsComponent {
 
   }
 
-  getAllCats() {
+  initCats() {
     if (this._catsService.checkLocalStorage() === null || this._catsService.checkLocalStorage() === 'undefined') {
       this._catsService.getAllCats().subscribe(r => {
         this._catsService.setCats(r);
@@ -54,10 +54,10 @@ export class DisplayCatsComponent {
   }
 
   navigateVotePage() {
-    this._router.navigate(['cats/vote-cat']).then();
+    this._router.navigate(['cats/vote-cat']);
   }
 
   ngOnInit() {
-    this.getAllCats();
+    this.initCats();
   }
 }
